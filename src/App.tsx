@@ -1,11 +1,15 @@
 import logo from "./assets/Logo.png";
 
-import { PlusCircle, Clipboard, Trash } from "phosphor-react";
+import { PlusCircle } from "phosphor-react";
 
 import styles from "./app.module.css";
 import { CardsTodo } from "./components/CardsTodo";
+import { EmptyCardsTodo } from "./components/EmptyCardsTodo";
+import { useState } from "react";
 
 function App() {
+  const [todo, setTodo] = useState([]);
+
   return (
     <>
       <header className={styles.header}>
@@ -34,16 +38,7 @@ function App() {
               <span>0</span>
             </div>
           </div>
-
-          {/* <div className={styles.containerBody}>
-            <Clipboard className={styles.clipboard} />
-            <p>Você ainda não tem tarefas cadastradas</p>
-            <span>Crie tarefas e organize seus itens a fazer</span>
-          </div> */}
-
-          <CardsTodo />
-          <CardsTodo />
-          <CardsTodo />
+          {todo.length === 0 ? <EmptyCardsTodo /> : <CardsTodo />}
         </div>
       </main>
     </>
