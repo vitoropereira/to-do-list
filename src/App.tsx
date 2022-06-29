@@ -1,8 +1,9 @@
 import logo from "./assets/Logo.png";
-import checkBox from "./assets/checkBox.png";
+
 import { PlusCircle, Clipboard, Trash } from "phosphor-react";
 
 import styles from "./app.module.css";
+import { CardsTodo } from "./components/CardsTodo";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           </button>
         </div>
       </header>
-      <main>
+      <main className={styles.main}>
         <div className={styles.container}>
           <div className={styles.containerHeader}>
             <div className={styles.containerHeaderTitle}>
@@ -40,57 +41,9 @@ function App() {
             <span>Crie tarefas e organize seus itens a fazer</span>
           </div> */}
 
-          <div className={styles.containerBodyItem}>
-            <button className={styles.checkBox}>
-              <img src={checkBox} className={styles.checkBoxImage} alt="logo" />
-            </button>
-            <div className={styles.containerBodyItemTitle}>
-              <p>
-                {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                eligendi dolorum eius qui necessitatibus quo excepturi dolorem
-                temporibus consectetur, error optio nihil tempore voluptates at
-                adipisci veritatis rerum ipsum provident!
-              </p>
-            </div>
-            <button className={styles.trashButton}>
-              <Trash className={styles.trash} />
-            </button>
-          </div>
-          <div className={styles.containerBodyItem}>
-            <button className={styles.checkBox}>
-              <img src={checkBox} className={styles.checkBoxImage} alt="logo" />
-            </button>
-            <div className={styles.containerBodyItemTitle}>
-              <p>
-                {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                eligendi dolorum eius qui necessitatibus quo excepturi dolorem
-                temporibus consectetur, error optio nihil tempore voluptates at
-                adipisci veritatis rerum ipsum provident!
-              </p>
-            </div>
-            <button className={styles.trashButton}>
-              <Trash className={styles.trash} />
-            </button>
-          </div>
-          <div className={styles.containerBodyItem}>
-            <button className={styles.checkBox}>
-              <img src={checkBox} className={styles.checkBoxImage} alt="logo" />
-            </button>
-            <div className={styles.containerBodyItemTitle}>
-              <p>
-                {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                eligendi dolorum eius qui necessitatibus quo excepturi dolorem
-                temporibus consectetur, error optio nihil tempore voluptates at
-                adipisci veritatis rerum ipsum provident!
-              </p>
-            </div>
-            <button className={styles.trashButton}>
-              <Trash className={styles.trash} />
-            </button>
-          </div>
+          <CardsTodo />
+          <CardsTodo />
+          <CardsTodo />
         </div>
       </main>
     </>
