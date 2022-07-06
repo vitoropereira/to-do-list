@@ -2,6 +2,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 16px;
     gap: 12px;
@@ -37,8 +38,27 @@
 }
 
 .inputCheckBox:hover {
+    border-radius: 50%;
     border-color: var(--blue-500);
     background-color: rgb(95, 97, 206, 0.6);
+}
+
+.inputCheckBoxChecked {
+    border-radius: 50%;
+    border-color: var(--blue-500);
+    background-color: rgb(95, 97, 206, 0.6);
+}
+
+.textChecked {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    /* or 20px */
+    text-decoration-line: line-through;
+    /* Gray 300 */
+    color: var(--gray-300);
 }
 
 .trashButton {
